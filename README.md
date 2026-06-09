@@ -4,8 +4,8 @@ A scoped ServiceNow application that automatically adds users to a task's watch 
 
 ## How It Works
 
-1. Admin creates **Recipients** -- named entries with an email address (e.g. "Database Team", "dba-team@example.com")
-2. Admin creates **Conditions** -- rules using the ServiceNow condition builder that match against the `task` table (e.g. "Assignment group is Database" or "Priority is Critical")
+1. Admin creates **Recipients** - named entries with an email address (e.g. "Database Team", "dba-team@example.com")
+2. Admin creates **Conditions** - rules using the ServiceNow condition builder that match against the `task` table (e.g. "Assignment group is Database" or "Priority is Critical")
 3. Each condition is linked to one or more recipients
 4. A **before** business rule on the `task` table evaluates all active conditions on every insert/update
 5. If a condition matches, the linked recipients are added to the task's `watch_list` field
